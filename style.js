@@ -52,3 +52,45 @@ function showQuotes() {
     quotesContainer.appendChild(q);
   }
 }
+
+// Display content
+function displayContent(user) {
+  content.classList.remove("hidden");
+  userForm.classList.add("hidden");
+  backToForm.classList.remove("hidden");
+
+  greet(user.name, user.age);
+  ageVerification(user.age);
+  showQuotes();
+}
+
+// Form submission
+userForm.addEventListener("submit", (e) => {
+  e.preventDefault();
+  const user = saveUser(nameInput.value, ageInput.value);
+  displayContent(user);
+});
+
+// Reset button
+resetBtn.addEventListener("click", () => {
+  localStorage.removeItem("user");
+  content.classList.add("hidden");
+  userForm.classList.remove("hidden");
+  backToForm.classList.add("hidden");
+});
+
+// Back to form link
+backToForm.addEventListener("click", () => {
+  localStorage.removeItem("user");
+  content.classList.add("hidden");
+  userForm.classList.remove("hidden");
+  backToForm.classList.add("hidden");
+});
+
+// Load stored user on page load
+window.onload = () => {
+  const storedUser = JSON.parse(localStorage.getItem("user"));
+  if (storedUser) {
+    displayContent(storedUser);
+  }
+};
