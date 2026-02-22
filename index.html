@@ -25,3 +25,32 @@
       </ul>
     </nav>
   </header>
+  <!-- FORM -->
+  <main class="flex items-center justify-center min-h-[calc(100vh-75px)] bg-gradient-to-r from-gray-100 to-gray-200">
+    <div class="bg-white shadow-lg rounded-lg p-6 w-full max-w-md">
+      <h1 class="text-2xl font-bold text-center mb-4">Welcome!</h1>
+      
+      <form id="userForm" class="space-y-4">
+        <input type="text" id="name" placeholder="Enter your name"
+          class="w-full p-2 border rounded focus:ring focus:ring-blue-300" required />
+        <input type="number" id="age" placeholder="Enter your age"
+          class="w-full p-2 border rounded focus:ring focus:ring-blue-300" required />
+        <button type="submit"
+         class="w-full bg-blue-500 text-white py-2 rounded hover:bg-blue-600">
+          Save Info
+        </button>
+      </form>
+
+      <div id="content" class="mt-6 hidden">
+        <p id="greeting" class="text-lg font-semibold"></p>
+        <p id="adultMessage" class="mt-2"></p>
+        <p id="ageInMonths" class="mt-2"></p>
+        <div id="quotes" class="mt-4 space-y-2"></div>
+        <button id="resetBtn" class="mt-4 bg-red-500 text-white py-2 px-4 rounded hover:bg-red-600">
+          Reset Info
+        </button>
+      </div>
+    </div>
+  </main>
+</body>
+</html>
