@@ -14,8 +14,9 @@ const backToForm = document.getElementById("backToForm");
 const quotes = [
   "Keep pushing forward! You got this!",
   "Believe in yourself and all that you are.",
-  "You can always achieve what you want and your age will never limit you!",
-  "Stay strong!"
+  "Every step forward is progress.",
+  "Stay positive, work hard, make it happen.",
+  "Your potential is endless."
 ];
 
 // Save user info in localStorage
@@ -24,7 +25,6 @@ function saveUser(name, age) {
   localStorage.setItem("user", JSON.stringify(user));
   return user;
 }
-
 
 // Age verification
 function ageVerification(age) {
