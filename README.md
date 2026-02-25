@@ -28,7 +28,7 @@ The main objective of this project is to collect user information (name and age)
 
 ![Below legal age ]('sss2.png')
 
-![Above legal age](sss3.png)
+![Above legal age]('sss3.png')
 
 ---
 
